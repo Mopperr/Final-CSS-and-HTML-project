@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Liran Yael Snyder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="header">
+            <nav class="nav">
+                <div class="nav-logo">
+                    <a href="index.html" style="display: flex; align-items: center; gap: 16px;">
+                        <img src="assets/IMG_5144_1ffd10e0-c1bf-4e51-9eaa-e0e5d538dec8.JPG" alt="Liran Yael Hebrew Translations">
+                        <span class="logo-text">Liran Yael Snyder</span>
+                    </a>
+                </div>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-links">
+                        <li><a href="index.html#about"><i class="fas fa-user-circle"></i><span>About</span></a></li>
+                        <li><a href="index.html#services"><i class="fas fa-language"></i><span>Services</span></a></li>
+                        <li><a href="index.html#process"><i class="fas fa-tasks"></i><span>Process</span></a></li>
+                        <li><a href="portfolio.html"><i class="fas fa-folder-open"></i><span>Portfolio</span></a></li>
+                        <li><a href="index.html#contact"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+                    </ul>
+                    <a href="index.html#contact" class="btn btn-primary btn-quote"><i class="fas fa-file-invoice"></i><span>Get a Quote</span></a>
+                </div>
+            </nav>
+        </header>
+
+        <main class="portfolio-page section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">MY WORK</span>
+                    <h2 class="section-title">Past Projects</h2>
+                    <p class="section-description">A selection of literary and film projects I've had the pleasure of translating.</p>
+                </div>
+
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <img src="assets/placeholder-book.jpg" alt="Book Cover" class="portfolio-image">
+                        <div class="portfolio-content">
+                            <span class="portfolio-category">Literary Translation</span>
+                            <h3 class="portfolio-title">The Silent Witness</h3>
+                            <p class="portfolio-description">Full novel translation (80,000 words) for bestselling author Jane Doe. Managed localization of cultural nuances for the Israeli market.</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <img src="assets/placeholder-film.jpg" alt="Film Still" class="portfolio-image">
+                        <div class="portfolio-content">
+                            <span class="portfolio-category">Film Subtitling</span>
+                            <h3 class="portfolio-title">Echoes of Tomorrow</h3>
+                            <p class="portfolio-description">Provided full subtitling and timing for a 120-minute independent sci-fi film. Ensured dialogue was both accurate and readable.</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <img src="assets/placeholder-book-2.jpg" alt="Book Cover" class="portfolio-image">
+                        <div class="portfolio-content">
+                            <span class="portfolio-category">Literary Translation</span>
+                            <h3 class="portfolio-title">Jerusalem: A Culinary Journey</h3>
+                            <p class="portfolio-description">Translated a complex, 250-page cookbook, adapting recipes and ingredient measurements for a Hebrew-speaking audience.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <h3>Liran Yael Snyder</h3>
+                        <p class="footer-subtitle">Hebrew Translator</p>
+                        <p>Professional English to Hebrew translation services that preserve authenticity and cultural nuance.</p>
+                    </div>
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h4>Services</h4>
+                            <ul>
+                                <li><a href="index.html#services">Literary Translation</a></li>
+                                <li><a href="index.html#services">Film & Subtitles</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h4>Company</h4>
+                            <ul>
+                                <li><a href="index.html#about">About Me</a></li>
+                                <li><a href="index.html#process">How It Works</a></li>
+                                <li><a href="index.html#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h4>Connect</h4>
+                            <ul>
+                                <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=lirasega@gmail.com&su=Translation%20Inquiry" target="_blank">Email</a><span class="footer-note"> (for direct questions otherwise use QUOTE form)</span></li>
+                                <li><a href="https://www.linkedin.com/in/liran-yael-snyder-840070136/" target="_blank">LinkedIn</a></li>
+                                <li><a href="portfolio.html">Portfolio</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Liran Yael Snyder. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // No need for the link-click-to-close script here,
+        // as all links navigate away from the page or to the homepage.
+    </script>
+</body>
+</html>

@@ -7,9 +7,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="page-wrapper">
     <!-- Navigation -->
     <header class="header">
         <nav class="nav">
@@ -24,12 +26,13 @@
             </button>
             <div class="nav-menu" id="navMenu">
                 <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#process">Process</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about"><i class="fas fa-user-circle"></i><span>About</span></a></li>
+                    <li><a href="#services"><i class="fas fa-language"></i><span>Services</span></a></li>
+                    <li><a href="#process"><i class="fas fa-tasks"></i><span>Process</span></a></li>
+                    <li><a href="portfolio.html"><i class="fas fa-folder-open"></i><span>Portfolio</span></a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
                 </ul>
-                <a href="#contact" class="btn btn-primary">Get a Quote</a>
+                <a href="#contact" class="btn btn-primary btn-quote"><i class="fas fa-file-invoice"></i><span>Get a Quote</span></a>
             </div>
         </nav>
     </header>
@@ -39,7 +42,7 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="hero-title">Professional English to Hebrew Translation</h1>
-            <p class="hero-subtitle">Precise, culturally-adapted translations that preserve your message's power and authenticity.</p>
+            <p class="hero-subtitle">Bringing your words to life in Hebrew with precision and cultural authenticity. From literary works to film subtitles, I deliver translations that resonate with Hebrew-speaking audiences while preserving your unique voice and vision.</p>
             <div class="hero-buttons">
                 <a href="#contact" class="btn btn-large btn-primary">Get Started</a>
                 <a href="#services" class="btn btn-large btn-secondary">Learn More</a>
@@ -55,11 +58,11 @@
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-item">
-                    <div class="stat-number">10+</div>
+                    <div class="stat-number">5+</div>
                     <div class="stat-label">Years Experience</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">500+</div>
+                    <div class="stat-number">10+</div>
                     <div class="stat-label">Projects Completed</div>
                 </div>
                 <div class="stat-item">
@@ -67,8 +70,8 @@
                     <div class="stat-label">Client Satisfaction</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">24/7</div>
-                    <div class="stat-label">Support Available</div>
+                    <div class="stat-number">Regular</div>
+                    <div class="stat-label">Office Hours <small style="font-size: 12px; display: block; margin-top: 4px; opacity: 0.8;">7am - 7pm EST</small></div>
                 </div>
             </div>
         </div>
@@ -145,7 +148,6 @@
                     <ul class="service-features">
                         <li>Expertly timed, culturally adapted subtitles</li>
                         <li>High-quality dubbing direction</li>
-                        <li>Marketing materials localization</li>
                     </ul>
                 </div>
             </div>
@@ -189,10 +191,9 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-label">PRICING</span>
-                <h2 class="section-title">Choose Your Package</h2>
+                <h2 class="section-title">Start Your Translation Today</h2>
             </div>
             <div class="pricing-grid">
-                <!-- Book Translation Package -->
                 <div class="pricing-card">
                     <h3 class="pricing-title">Book Translation</h3>
                     <div class="pricing-tiers">
@@ -219,7 +220,6 @@
                     <a href="#contact" class="btn btn-pricing">Get Quote</a>
                 </div>
 
-                <!-- Movie Subtitling Package -->
                 <div class="pricing-card pricing-featured">
                     <div class="featured-badge">Most Popular</div>
                     <h3 class="pricing-title">Movie Subtitling</h3>
@@ -244,16 +244,41 @@
     <section id="contact" class="cta section">
         <div class="container">
             <div class="cta-content">
-                <h2>Ready to Share Your Story With a Hebrew-Speaking Audience?</h2>
-                <p>Don't wait for the world to find you. Take your story to a new audience.</p>
-                <div class="cta-buttons">
-                    <a href="#" class="btn btn-large btn-primary">Get Your Free Quote</a>
-                    <a href="#" class="btn btn-large btn-secondary">Schedule a Consultation</a>
+                <div class="section-header">
+                    <span class="section-label">GET A QUOTE</span>
+                    <h2 class="section-title">Ready to Share Your Story?</h2>
+                    <p class="section-description">Fill out the form below, and I'll get back to you within 24 hours with a free, no-obligation quote for your project.</p>
                 </div>
+                
+                <form id="contact-form" class="contact-form" action="https://formspree.io/f/xblqjlrj" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Needed</label>
+                        <select id="service" name="service">
+                            <option value="not-selected">Please select a service...</option>
+                            <option value="book-translation">Book Translation</option>
+                            <option value="movie-subtitling">Movie Subtitling</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Project Details</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Tell me about your project, length, and timeline..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-large btn-primary">Get Your Free Quote</button>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -269,7 +294,6 @@
                         <ul>
                             <li><a href="#services">Literary Translation</a></li>
                             <li><a href="#services">Film & Subtitles</a></li>
-                            <li><a href="#services">Marketing Materials</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
@@ -283,9 +307,9 @@
                     <div class="footer-column">
                         <h4>Connect</h4>
                         <ul>
-                            <li><a href="#">Email</a></li>
-                            <li><a href="#">LinkedIn</a></li>
-                            <li><a href="#">Portfolio</a></li>
+                            <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=lirasega@gmail.com&su=Translation%20Inquiry" target="_blank">Email</a><span class="footer-note"> (for direct questions otherwise use QUOTE form above)</span></li>
+                            <li><a href="https://www.linkedin.com/in/liran-yael-snyder-840070136/" target="_blank">LinkedIn</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
                         </ul>
                     </div>
                 </div>
@@ -295,9 +319,9 @@
             </div>
         </div>
     </footer>
+    </div>
 
     <script>
-        // Hamburger menu toggle
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('navMenu');
 
@@ -306,7 +330,6 @@
             navMenu.classList.toggle('active');
         });
 
-        // Close menu when clicking on a link
         const navLinks = document.querySelectorAll('.nav-links a');
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
